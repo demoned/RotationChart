@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+    }
+}
+
+dependencies {
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+}
