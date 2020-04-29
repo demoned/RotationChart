@@ -34,8 +34,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.bojun.rotation.transformer.BGAPageTransformer;
 import com.bojun.rotation.transformer.TransitionEffect;
 
-import cn.bingoogolapple.bgabanner.R;
-
 public class BGABanner extends RelativeLayout implements BGAViewPager.AutoPlayDelegate, ViewPager.OnPageChangeListener {
     private static final int RMP = RelativeLayout.LayoutParams.MATCH_PARENT;
     private static final int RWC = RelativeLayout.LayoutParams.WRAP_CONTENT;
@@ -183,7 +181,7 @@ public class BGABanner extends RelativeLayout implements BGAViewPager.AutoPlayDe
             mContentBottomMargin = typedArray.getDimensionPixelSize(attr, mContentBottomMargin);
         } else if (attr == R.styleable.Banner_banner_aspectRatio) {
             mAspectRatio = typedArray.getFloat(attr, mAspectRatio);
-        } else if (attr == R.styleable.BGABanner_android_scaleType) {
+        } else if (attr == R.styleable.Banner_android_scaleType) {
             final int index = typedArray.getInt(attr, -1);
             if (index >= 0 && index < sScaleTypeArray.length) {
                 mScaleType = sScaleTypeArray[index];
