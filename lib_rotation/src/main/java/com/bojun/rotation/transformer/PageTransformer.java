@@ -3,7 +3,7 @@ package com.bojun.rotation.transformer;
 import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 
-public abstract class BGAPageTransformer implements ViewPager.PageTransformer {
+public abstract class PageTransformer implements ViewPager.PageTransformer {
 
     public void transformPage(View view, float position) {
         if (position < -1.0f) {
@@ -30,7 +30,7 @@ public abstract class BGAPageTransformer implements ViewPager.PageTransformer {
 
     public abstract void handleRightPage(View view, float position);
 
-    public static BGAPageTransformer getPageTransformer(TransitionEffect effect) {
+    public static PageTransformer getPageTransformer(TransitionEffect effect) {
         switch (effect) {
             case Default:
                 return new DefaultPageTransformer();

@@ -3,7 +3,7 @@ package com.bojun.rotation.transformer;
 import androidx.core.view.ViewCompat;
 import android.view.View;
 
-public class FlipPageTransformer extends BGAPageTransformer {
+public class FlipPageTransformer extends PageTransformer {
     private static final float ROTATION = 180.0f;
 
     @Override

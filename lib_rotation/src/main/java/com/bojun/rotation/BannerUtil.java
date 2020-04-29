@@ -17,9 +17,9 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 
-public class BGABannerUtil {
+public class BannerUtil {
 
-    private BGABannerUtil() {
+    private BannerUtil() {
     }
 
     public static int dp2px(Context context, float dpValue) {
@@ -30,7 +30,7 @@ public class BGABannerUtil {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, spValue, context.getResources().getDisplayMetrics());
     }
 
-    public static ImageView getItemImageView(Context context, @DrawableRes int resId, BGALocalImageSize localImageSize, ImageView.ScaleType scaleType) {
+    public static ImageView getItemImageView(Context context, @DrawableRes int resId, LocalImageSize localImageSize, ImageView.ScaleType scaleType) {
         ImageView imageView = new ImageView(context);
         imageView.setImageBitmap(getScaledImageFromResource(context, resId, localImageSize.getMaxWidth(), localImageSize.getMaxHeight(), localImageSize.getMinWidth(), localImageSize.getMinHeight()));
         imageView.setClickable(true);

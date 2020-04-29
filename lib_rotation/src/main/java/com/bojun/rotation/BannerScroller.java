@@ -3,10 +3,10 @@ package com.bojun.rotation;
 import android.content.Context;
 import android.widget.Scroller;
 
-public class BGABannerScroller extends Scroller {
+public class BannerScroller extends Scroller {
     private int mDuration = 1000;
 
-    public BGABannerScroller(Context context, int duration) {
+    public BannerScroller(Context context, int duration) {
         super(context);
         mDuration = duration;
     }

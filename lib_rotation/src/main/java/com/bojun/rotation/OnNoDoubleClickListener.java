@@ -2,14 +2,14 @@ package com.bojun.rotation;
 
 import android.view.View;
 
-public abstract class BGAOnNoDoubleClickListener implements View.OnClickListener {
+public abstract class OnNoDoubleClickListener implements View.OnClickListener {
     private int mThrottleFirstTime = 1000;
     private long mLastClickTime = 0;
 
-    public BGAOnNoDoubleClickListener() {
+    public OnNoDoubleClickListener() {
     }
 
-    public BGAOnNoDoubleClickListener(int throttleFirstTime) {
+    public OnNoDoubleClickListener(int throttleFirstTime) {
         mThrottleFirstTime = throttleFirstTime;
     }
 

@@ -3,7 +3,7 @@ package com.bojun.rotation.transformer;
 import androidx.core.view.ViewCompat;
 import android.view.View;
 
-public class ZoomCenterPageTransformer extends BGAPageTransformer {
+public class ZoomCenterPageTransformer extends PageTransformer {
 
     @Override
     public void handleInvisiblePage(View view, float position) {

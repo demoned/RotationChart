@@ -4,7 +4,7 @@ import android.view.View;
 
 import androidx.core.view.ViewCompat;
 
-public class ZoomStackPageTransformer extends BGAPageTransformer {
+public class ZoomStackPageTransformer extends PageTransformer {
 
     @Override
     public void handleInvisiblePage(View view, float position) {

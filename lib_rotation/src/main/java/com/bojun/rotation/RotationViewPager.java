@@ -15,15 +15,15 @@ import androidx.viewpager.widget.ViewPager;
 /**
  * 继承ViewPager，通过反射方式实现支持低版本上切换动画
  */
-public class BGAViewPager extends ViewPager {
+public class RotationViewPager extends ViewPager {
     private boolean mAllowUserScrollable = true;
     private AutoPlayDelegate mAutoPlayDelegate;
 
-    public BGAViewPager(Context context) {
+    public RotationViewPager(Context context) {
         super(context);
     }
 
-    public BGAViewPager(Context context, AttributeSet attrs) {
+    public RotationViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -34,9 +34,9 @@ public class BGAViewPager extends ViewPager {
      */
     public void setPageChangeDuration(int duration) {
         try {
-            Field scrollerField = ViewPager.class.getDeclaredField("mScroller");
+            Field scrollerField = RotationViewPager.class.getDeclaredField("mScroller");
             scrollerField.setAccessible(true);
-            scrollerField.set(this, new BGABannerScroller(getContext(), duration));
+            scrollerField.set(this, new BannerScroller(getContext(), duration));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -48,7 +48,7 @@ public class BGAViewPager extends ViewPager {
      * @param position
      */
     public void setBannerCurrentItemInternal(int position, boolean smoothScroll) {
-        Class viewpagerClass = ViewPager.class;
+        Class viewpagerClass = RotationViewPager.class;
         try {
             Method setCurrentItemInternalMethod = viewpagerClass.getDeclaredMethod("setCurrentItemInternal", int.class, boolean.class, boolean.class);
             setCurrentItemInternalMethod.setAccessible(true);
@@ -93,7 +93,7 @@ public class BGAViewPager extends ViewPager {
 
     private float getXVelocity() {
         float xVelocity = 0;
-        Class viewpagerClass = ViewPager.class;
+        Class viewpagerClass = RotationViewPager.class;
         try {
             Field velocityTrackerField = viewpagerClass.getDeclaredField("mVelocityTracker");
             velocityTrackerField.setAccessible(true);

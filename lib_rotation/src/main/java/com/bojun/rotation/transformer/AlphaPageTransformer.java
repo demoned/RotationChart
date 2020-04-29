@@ -3,7 +3,7 @@ package com.bojun.rotation.transformer;
 import androidx.core.view.ViewCompat;
 import android.view.View;
 
-public class AlphaPageTransformer extends BGAPageTransformer {
+public class AlphaPageTransformer extends PageTransformer {
     private float mMinScale = 0.4f;
 
     public AlphaPageTransformer() {

@@ -9,16 +9,16 @@ import android.widget.FrameLayout;
 /**
  * 引导界面联动布局，将每一个触摸事件分发给所有的子控件
  */
-public class BGAGuideLinkageLayout extends FrameLayout {
-    public BGAGuideLinkageLayout(Context context) {
+public class GuideLinkageLayout extends FrameLayout {
+    public GuideLinkageLayout(Context context) {
         super(context);
     }
 
-    public BGAGuideLinkageLayout(Context context, AttributeSet attrs) {
+    public GuideLinkageLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public BGAGuideLinkageLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public GuideLinkageLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

@@ -2,7 +2,7 @@ package com.bojun.rotation.transformer;
 
 import android.view.View;
 
-public class DefaultPageTransformer extends BGAPageTransformer {
+public class DefaultPageTransformer extends PageTransformer {
 
     @Override
     public void handleInvisiblePage(View view, float position) {

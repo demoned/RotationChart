@@ -4,7 +4,7 @@ import android.view.View;
 
 import androidx.core.view.ViewCompat;
 
-public class DepthPageTransformer extends BGAPageTransformer {
+public class DepthPageTransformer extends PageTransformer {
     private float mMinScale = 0.8f;
 
     public DepthPageTransformer() {

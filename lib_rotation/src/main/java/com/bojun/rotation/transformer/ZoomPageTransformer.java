@@ -3,7 +3,7 @@ package com.bojun.rotation.transformer;
 import androidx.core.view.ViewCompat;
 import android.view.View;
 
-public class ZoomPageTransformer extends BGAPageTransformer {
+public class ZoomPageTransformer extends PageTransformer {
     private float mMinScale = 0.85f;
     private float mMinAlpha = 0.65f;
 

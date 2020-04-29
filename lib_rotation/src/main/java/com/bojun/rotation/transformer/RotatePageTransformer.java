@@ -3,7 +3,7 @@ package com.bojun.rotation.transformer;
 import androidx.core.view.ViewCompat;
 import android.view.View;
 
-public class RotatePageTransformer extends BGAPageTransformer {
+public class RotatePageTransformer extends PageTransformer {
     private float mMaxRotation = 15.0f;
 
     public RotatePageTransformer() {
